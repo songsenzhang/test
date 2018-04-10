@@ -1,0 +1,24 @@
+spring:
+  profiles: local
+
+info:
+  component: Case Service local
+
+couchbase.cluster:
+  hosts:
+    - "127.0.0.1"
+  password: ""
+  bucket:
+    default: "cases"
+    cases: "cases"
+    goods: "goods"
+    users: "users"
+
+mybatis.executor-type: BATCH
+#mybatis.logImpl: LOG4J
+mybatis.mapperLocations: classpath*:**/mappers/*.xml
+spring.datasource.driver-class-name: com.mysql.jdbc.Driver
+spring.datasource.type: com.zaxxer.hikari.HikariDataSource
+spring.datasource.url: jdbc:mysql://localhost:3306/crazyhonest?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useTimezone=true&serverTimezone=GMT&allowMultiQueries=true
+spring.datasource.username: root
+spring.datasource.password: 123456
